@@ -1,0 +1,125 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+            <!-- Custom styles for this template -->
+        <link href="@routes.Assets.versioned("stylesheets/grayscale.min.css")" rel="stylesheet">
+    </head>
+    <body id="page-top">
+            <!-- Temporary navbar container fix -->
+        <style>
+                .navbar-toggler {
+                    z-index: 1;
+                }
+
+                @@media
+
+                (
+                max-width:
+
+                576
+                px
+
+                )
+                {
+                nav > .container {
+                    width: 100%;
+                }
+
+                }
+        </style>
+
+
+
+        <body id="page-top">
+
+            <nav id="black-nav" class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand page-scroll" href="#page-top" style="
+                            color: #000000;
+                            font-family: 'Tangerine', cursive;
+                            font-size: 41px;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                        "><h3 id="fancyText">Evan Conlon</h3>
+                        </a>
+                    </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a class="page-scroll" href="#">Services</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#">About</a>
+                            </li>
+
+                            <li>
+                                <a class="page-scroll" href="#">Gallery</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#">Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                        <!-- /.navbar-collapse -->
+                </div>
+                    <!-- /.container-fluid -->
+            </nav>
+
+            @content
+
+
+                <!-- Footer -->
+            <footer>
+                <div class="container text-center">
+                    <p>Copyright &copy; Your Website 2017</p>
+                </div>
+            </footer>
+
+        </body>
+            <!-- Include jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+                function goBack() {
+                    window.history.back();
+                }
+        </script>
+        <script>
+                $().ready(function () {
+                    $('#wrapper').tubular({videoId: 's6zR2T9vn2c'}); // where idOfYourVideo is the YouTube ID. }
+        </script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+            <!-- Plugin JavaScript -->
+        <script src="http://gsgd.co.uk/sandbox/jquery/easing"></script>
+
+            <!-- Custom scripts for this template -->
+        <script src="@routes.Assets.versioned("javascripts/grayscale.min.js")"></script>
+</html>
